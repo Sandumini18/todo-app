@@ -1,0 +1,61 @@
+.App{
+  background-color: rgb(147, 229, 179);
+  width: 500px;
+  padding: 10px;
+  border-radius: 9px;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+input{
+  width: 350px;
+  height: 40px;
+  border-radius: 5px;
+  margin-left: 35px;
+  font-size: 20px;
+}
+
+button{
+  color: black;
+  background-color: rgb(230, 247, 242);
+  margin-left: 5px;
+  border: none;
+  height: 40px;
+  width: 50px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.text{
+  margin-bottom: 15px;
+  list-style-type: none;
+  font-size: 20px;
+  background-color: antiquewhite;
+  height: 50px;
+  border-radius: 5px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.box{
+  height: 20px;
+  width: 20px;
+  background-color: hsl(180, 32%, 47%);
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+
+}
+
+img{
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}

@@ -30,9 +30,14 @@ function App() {
   
   return (
     <div className='App'>
+      <div className='textBox' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+        <img src='./image/appimage.webp' alt='appimage' style={{width:'200px', height:'200px'}}/>
+      </div>
+      <div className='textBox' style={{backgroundColor:'rgb(204, 240, 238)', borderRadius:'8px'}}>
       <h1>To do list</h1>
       <Form onAdd={addTask}/>
       <TaskList allTasks={allTasks} onDelete={deleteTask} onEdit={editTask}/>
+      </div>
     </div>
   );
 }

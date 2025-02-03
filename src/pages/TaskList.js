@@ -4,6 +4,7 @@ function TaskList(props) {
 
   const [editTask,setEditTask] = useState("");
   const [editTaskId,setEditTaskId] = useState();
+  const [completeTask, setCompleteTask] = useState(false)
 
   const handleEdit = (taskId, currentTask) =>{
     setEditTaskId(taskId);
@@ -21,8 +22,13 @@ function TaskList(props) {
     setEditTask("");
   }
 
+  const handleComplete = () => {
+    setCompleteTask(prevCheck => !prevCheck);
+    console.log({completeTask})
+  }
+
   return (
-    <div>
+    <div >
         <ul>
             {props.allTasks.map((g) => (
                 <li key={g.id} className='text'>
@@ -33,12 +39,14 @@ function TaskList(props) {
                     </form>
                    ):(
                    <span>
-                    <div className='box'></div>
+                    <div className='box' onClick={() => handleComplete(g.id)}>
+                      
+                    </div>
                     
                     {g.task}
                     
-                    <img src="./image/images.png" alt="edit" onClick={()=>handleEdit(g.id, g.task)}/>
-                    <img src="./image/delete.png" alt="edit" onClick={()=>props.onDelete(g.id)}/>
+                    <img src="./image/images.png" alt="edit" onClick={()=>handleEdit(g.id, g.task)} className='btn'/>
+                    <img src="./image/delete.png" alt="edit" onClick={()=>props.onDelete(g.id)} className='btn'/>
                     
                    </span>)
                   }
